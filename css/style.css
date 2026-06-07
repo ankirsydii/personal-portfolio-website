@@ -6,8 +6,19 @@
 }
 
 body{
-    background:#0F172A;
+    background:
+        radial-gradient(circle at top left,
+        rgba(56,189,248,0.15),
+        transparent 30%),
+
+        radial-gradient(circle at bottom right,
+        rgba(168,85,247,0.15),
+        transparent 30%),
+
+        #0F172A;
+
     color:white;
+    overflow-x:hidden;
 }
 
 .navbar{
@@ -41,53 +52,99 @@ body{
     min-height:90vh;
     display:flex;
     align-items:center;
+    justify-content:center;
+    padding:50px 10%;
+}
+
+.hero-content{
+    display:flex;
     justify-content:space-between;
-    padding:0 10%;
+    align-items:center;
+    width:100%;
+    gap:60px;
 }
 
 .hero-text{
-    max-width:600px;
+    flex:1;
+}
+
+.greeting{
+    color:#38BDF8;
+    font-size:1.1rem;
 }
 
 .hero-text h1{
-    font-size:4rem;
-    color:#38BDF8;
+    font-size:4.5rem;
+    margin-top:10px;
+    margin-bottom:15px;
 }
 
 .hero-text h2{
-    margin-top:10px;
+    font-size:2rem;
+    color:#38BDF8;
+    min-height:60px;
 }
 
-.description{
+.hero-text p{
     margin-top:20px;
     line-height:1.8;
     color:#CBD5E1;
+    max-width:600px;
 }
 
-.buttons{
-    margin-top:30px;
+.hero-buttons{
+    margin-top:35px;
 }
 
-.btn-primary,
-.btn-secondary{
+.btn{
     text-decoration:none;
-    padding:12px 25px;
-    border-radius:8px;
-    margin-right:10px;
+    padding:14px 28px;
+    border-radius:12px;
+    margin-right:12px;
+    transition:.3s;
 }
 
 .btn-primary{
     background:#38BDF8;
     color:#0F172A;
-    font-weight:bold;
+    font-weight:600;
 }
 
-.btn-secondary{
+.btn-primary:hover{
+    transform:translateY(-3px);
+}
+
+.btn-outline{
     border:2px solid #38BDF8;
     color:#38BDF8;
 }
 
+.btn-outline:hover{
+    background:#38BDF8;
+    color:#0F172A;
+}
+
+.hero-image{
+    position:relative;
+}
+
 .hero-image img{
     width:350px;
+    height:350px;
+    object-fit:cover;
     border-radius:50%;
+    position:relative;
+    z-index:2;
+}
+
+.glow-circle{
+    width:360px;
+    height:360px;
+    border-radius:50%;
+    background:#38BDF8;
+    filter:blur(90px);
+    opacity:.4;
+    position:absolute;
+    top:-5px;
+    left:-5px;
 }
