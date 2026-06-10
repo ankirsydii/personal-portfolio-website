@@ -129,12 +129,8 @@ body{
 }
 
 .hero-image img{
-    width:350px;
-    height:350px;
-    object-fit:cover;
-    border-radius:50%;
-    position:relative;
-    z-index:2;
+    width: 400px;
+    transform:translateY(-200px) scale(2.7);
 }
 
 .glow-circle{
@@ -147,6 +143,7 @@ body{
     position:absolute;
     top:-5px;
     left:-5px;
+    pointer-events:none;
 }
 
 .about,

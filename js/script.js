@@ -4,7 +4,7 @@ const roles = [
     "Web Developer",
     "Mobile Developer",
     "AR Enthusiast",
-    "Cloud Computing Learner"
+    "3D Modelling"
 ];
 
 let roleIndex = 0;
